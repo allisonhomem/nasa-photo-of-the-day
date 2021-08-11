@@ -14,7 +14,7 @@ function LearnMore(props){
 
     return(
         <div>
-            <button disabled={disabledButton} onClick={clicky}> Learn More </button>
+            <button disabled={disabledButton} onClick={useEffect}> Learn More </button>
             <p disabled={enabledP}> {explain} </p>
         </div>
     )
