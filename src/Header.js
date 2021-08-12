@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from './theme/index.js';
 
-const styledHeader = styled.div `
+const StyledHeader = styled.div `
 background-color: ${pr => pr.theme.darkColor};
 min-height: 10vh;
 display: flex;
@@ -13,7 +13,7 @@ font-size: calc(10px + 2vmin);
 color: ${pr => pr.theme.lightColor};
 `;
 
-const styledLogo = styled.img `
+const StyledLogo = styled.img `
 height: 15%;
 width:15%;
 `;
@@ -22,10 +22,10 @@ width:15%;
     const { date } = props;
 
     return(
-        <styledHeader theme={ theme }>
-            <styledLogo theme={ theme } src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NASA_Worm_logo.svg/1280px-NASA_Worm_logo.svg.png' alt='Nasa Logo'></styledLogo>
+        <StyledHeader theme={theme}>
+            <StyledLogo theme={theme} src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NASA_Worm_logo.svg/1280px-NASA_Worm_logo.svg.png' alt='Nasa Logo'></StyledLogo>
             <p> {date} </p>
-        </styledHeader>
+        </StyledHeader>
     )
 };
 

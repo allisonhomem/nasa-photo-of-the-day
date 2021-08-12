@@ -3,6 +3,15 @@ import axios from 'axios';
 import Header from './Header.js';
 import Body from './Body.js';
 import "./App.css";
+import styled from 'styled-components';
+import theme from './theme/index.js';
+
+const StyledApp = styled.div `
+  text-align: center;
+  font-family: ${pr => pr.theme.fontMain};
+  color: ${pr => pr.theme.darkColor};
+  background-color: ${pr => pr.theme.lightColor};
+`
 
 function App() {
   const [ apodData, setApodData ] = useState({});
@@ -11,7 +20,6 @@ function App() {
     console.log('fetching data');
     axios.get('https://api.nasa.gov/planetary/apod?api_key=xQXySdxom5h6szZtFdwgAqy78wLBXaylm2DpxbDm')
          .then(res => {
-           console.log(res.data);
            setApodData(res.data);
          })
          .catch(err => {
@@ -20,10 +28,10 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <StyledApp theme={theme}>
      <Header date={apodData.date} />
      <Body apodData={apodData} />
-    </div>
+    </StyledApp>
   );
 }
 
