@@ -6,8 +6,9 @@ function Body(props){
 
     return(
         <div className='Body-container'>
+            <h1> Astronomy Picture of the Day </h1>
             <img src={apodData.hdurl} alt='Pic of Day'></img>
-            <h1>{apodData.title}</h1>
+            <h2>{apodData.title}</h2>
             <LearnMore explain={apodData.explanation} />
         </div>
     )
