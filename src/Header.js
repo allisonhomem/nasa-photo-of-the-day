@@ -4,7 +4,7 @@ import theme from './theme/index.js';
 
 const StyledHeader = styled.div `
 background-color: ${pr => pr.theme.darkColor};
-min-height: 10vh;
+height: 7vh;
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -14,8 +14,9 @@ color: ${pr => pr.theme.lightColor};
 `;
 
 const StyledLogo = styled.img `
-height: 15%;
-width:15%;
+height: 5vh;
+width: 20%;
+object-fit: contain;
 `;
 
  function Header(props){

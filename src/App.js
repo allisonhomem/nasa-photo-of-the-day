@@ -10,7 +10,6 @@ const StyledApp = styled.div `
   text-align: center;
   font-family: ${pr => pr.theme.fontMain};
   color: ${pr => pr.theme.darkColor};
-  background-color: ${pr => pr.theme.lightColor};
 `
 
 function App() {
